@@ -2,6 +2,58 @@
 
 # Watson Discovery News Alerting
 
+# Walkthrough Notes
+
+The goal of this [walkthrough](https://youtu.be/N-HaIpPGde0) is to highlight how to get started with queries in the Discovery Query Tool for Discovery News.
+
+## Opening the Discovery Query Tool
+
+Open IBM Cloud to the services list: [http://console.bluemix.net/services/](http://console.bluemix.net/services/)
+
+1. Select your Discovery service
+1. Click launch tool
+1. Select "Watson Discovery News"
+1. Select "Query this collection"
+![](doc/source/images/query1.png)
+1. You can run the default query with no parameters or choose one of the "Sample Queries"
+![](doc/source/images/query2.png)
+
+## Basic queries
+
+Start by selecting the "Use natural language" for a query.
+
+1. Enter the query "IBM Watson in Education"
+1. Review the results, notice any which might not fit.
+1. Add a filter to remove a result, in the example it's "`enriched_title.keywords.text:!"CEBIT"`"
+1. Review features of filter
+  * Highlighting certain attributes in the response
+  * Negating a query
+  * Grouping
+
+Further inspect the results and the layout of the JSON which is returned from the discovery service.
+
+Compare fields with the [service features](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/#service-features) in the documentation.
+
+## Advanced queries
+
+Start by selecting "Use the Discovery Query Language" which opens up a text box with the placeholder "Enter query here".
+
+1. Enter the query "IBM Watson in education"
+1. Review results and the similarity to the "Use natural language" results
+1. Change the query to look for "`enriched_title.keywords.text:!"OnStar",enriched_title.keywords.text:!"CEBIT"`"
+1. Review the results and look for any odd titles
+1. Change the query to look for "`enrichedTitle.text:\"21st Century Medicine\"`"
+1. Review the results, they shouldn't change much
+1. Change the query to look for "`enrichedTitle.text:\"21st Century Medicine\: Where Big Tech Is Placing Bets In Healthcare\"`", this is an exact search for an article in the results
+1. Review that some results are still not relevant
+1. Enter this filter "`enrichedTitle.text:!\"FE Investegate\"`"
+1. Review that now the "FE Investegate" article is no longer shown
+
+
+
+
+
+
 In this Code Pattern, we will build a Node.js web application that will use the Watson Discovery Service to access Watson Discovery News.
 
 Watson Discovery News is a default data collection that is associated with the Watson Discovery Service. It is a dataset of primarily English language news sources that is updated continuously, with approximately 300,000 new articles and blogs added daily.
