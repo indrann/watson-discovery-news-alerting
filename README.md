@@ -18,7 +18,7 @@ Open IBM Cloud to the services list: [http://console.bluemix.net/services/](http
 1. You can run the default query with no parameters or choose one of the "Sample Queries"
 ![](doc/source/images/query2.png)
 
-## Basic queries
+## Using Natural Language
 
 Start by selecting the "Use natural language" for a query.
 
@@ -34,21 +34,16 @@ Further inspect the results and the layout of the JSON which is returned from th
 
 Compare fields with the [service features](https://www.ibm.com/watson/developercloud/doc/natural-language-understanding/#service-features) in the documentation.
 
-## Advanced queries
+## Basic Discovery Query Language
 
-Start by selecting "Use the Discovery Query Language" which opens up a text box with the placeholder "Enter query here".
+Start by selecting "Use the Discovery Query Language" 
 
-1. Enter the query "IBM Watson in education"
-1. Review results and the similarity to the "Use natural language" results
-1. Change the query to look for "`enriched_title.keywords.text:!"OnStar",enriched_title.keywords.text:!"CEBIT"`"
-1. Review the results and look for any odd titles
-1. Change the query to look for "`enrichedTitle.text:\"21st Century Medicine\"`"
-1. Review the results, they shouldn't change much
-1. Change the query to look for "`enrichedTitle.text:\"21st Century Medicine\: Where Big Tech Is Placing Bets In Healthcare\"`", this is an exact search for an article in the results
+1. In the Field select 'text' using the Operator 'contains' and the value 'Pittsburg Steelers'
+1. Add a second rule 'enriched_title.sentiment.document.label' using the Operator 'contains' and the value 'positive'
+1. Under the More options select the tilte and the text and review the search results. 
 1. Review that some results are still not relevant
-1. Enter this filter "`enrichedTitle.text:!\"FE Investegate\"`"
-1. Review that now the "FE Investegate" article is no longer shown
-
+1. Enter this filter title:"Superman"
+1. Review that now this the only article that shows up. 
 
 
 
