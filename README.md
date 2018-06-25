@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/IBM/watson-discovery-news-alerting.svg?branch=master)](https://travis-ci.org/IBM/watson-discovery-news-alerting)
 
-# Watson Discovery News Alerting
+# Watson Discovery News Walkthrough
 
 # Walkthrough Notes
 
