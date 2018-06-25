@@ -47,9 +47,11 @@ Start by selecting "Use the Discovery Query Language"
 
 
 
+## Basic Discovery Query Language
 
+Run the default queries and note the Discovery Query Language parameters that used to satisfy the query 
 
-In this Code Pattern, we will build a Node.js web application that will use the Watson Discovery Service to access Watson Discovery News.
+The exercise is part of Code Pattern, we will build a Node.js web application that will use the Watson Discovery Service to access Watson Discovery News.
 
 Watson Discovery News is a default data collection that is associated with the Watson Discovery Service. It is a dataset of primarily English language news sources that is updated continuously, with approximately 300,000 new articles and blogs added daily.
 
